@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-blue-50 font-sans leading-normal tracking-normal">
+<body class="bg-white font-sans leading-normal tracking-normal">
     <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0">
             <div class="w-1/2 pl-2 md:pl-0">
@@ -59,12 +59,12 @@
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20" id="nav-content">
                 <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-pink-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600">
-                            <i class="fas fa-home fa-fw mr-3 text-pink-600"></i><span class="pb-1 md:pb-0 text-sm">Home</span>
+                        <a href="index.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-blue-700 hover:border-blue-300">
+                            <i class="fas fa-home fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Home</span>
                         </a>
                     </li>
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-green-500">
+                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-blue-300">
                             <i class="fas fa-chart-area fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Analytics</span>
                         </a>
                     </li>
@@ -81,159 +81,394 @@
         </div>
     </nav>
 
-    <!--Container-->
-    <div class="container w-full mx-auto mb-[-20px] md:mb-0 pt-20 lg:pt-[100px]">
+    <main class="w-full bg-sky-50 pb-10 mt-0 md:mt-[-30px] lg:mt-[0px]">
+        <!--Container-->
+        <section id="home" class="container w-full mx-auto mb-[-20px] md:mb-0 pt-20 lg:pt-[100px]">
 
-        <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
+            <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
-            <!--Console Content-->
+                <!--Console Content-->
 
-            <div class="flex flex-wrap">
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
-                    <div class="bg-white border rounded-2xl md:rounded shadow-md md:shadow p-6 md:p-4">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded-xl md:rounded p-3 bg-blue-300"><i class="fa fa-hourglass fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold uppercase text-gray-500">Pending Requests</h5>
-                                <h3 class="font-bold text-3xl">17 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></h3>
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <!--Metric Card-->
+                        <div id="pending-btn" class="bg-white hover:bg-slate-50 border-[3px] border-white rounded-2xl md:rounded shadow-md md:shadow p-6 md:p-4 cursor-pointer">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-xl md:rounded p-3 bg-blue-300"><i class="fa fa-hourglass fa-2x fa-fw fa-inverse"></i></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h5 class="font-bold uppercase text-gray-500">Pending Requests</h5>
+                                    <h3 class="font-bold text-3xl">6 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></h3>
+                                </div>
                             </div>
                         </div>
+                        <!--/Metric Card-->
                     </div>
-                    <!--/Metric Card-->
-                </div>
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
-                    <div class="bg-white border rounded-2xl md:rounded shadow-md md:shadow p-6 md:p-4">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded-xl md:rounded p-3 bg-green-600"><i class="fas fa-check-circle fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold uppercase text-gray-500">Approved Requests</h5>
-                                <h3 class="font-bold text-3xl">249 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></h3>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <!--Metric Card-->
+                        <div id="approved-btn" class="bg-white hover:bg-slate-50 border-[3px] border-white rounded-2xl md:rounded shadow-md md:shadow p-6 md:p-4 cursor-pointer">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-xl md:rounded p-3 bg-green-600"><i class="fas fa-check-circle fa-2x fa-fw fa-inverse"></i></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h5 class="font-bold uppercase text-gray-500">Approved Requests</h5>
+                                    <h3 class="font-bold text-3xl">9 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></h3>
+                                </div>
                             </div>
                         </div>
+                        <!--/Metric Card-->
                     </div>
-                    <!--/Metric Card-->
-                </div>
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
-                    <div class="bg-white border rounded-2xl md:rounded shadow-md md:shadow p-6 md:p-4">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded-xl md:rounded p-3 bg-red-600"><i class="fas fa-user-minus fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold uppercase text-gray-500">Declined Requests</h5>
-                                <h3 class="font-bold text-3xl">2 <span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></h3>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <!--Metric Card-->
+                        <div id="declined-btn" class="bg-white hover:bg-slate-50 border-[3px] border-white rounded-2xl md:rounded shadow-md md:shadow p-6 md:p-4 cursor-pointer">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-xl md:rounded p-3 bg-red-600"><i class="fas fa-user-minus fa-2x fa-fw fa-inverse"></i></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h5 class="font-bold uppercase text-gray-500">Declined Requests</h5>
+                                    <h3 class="font-bold text-3xl">2 <span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></h3>
+                                </div>
                             </div>
                         </div>
+                        <!--/Metric Card-->
                     </div>
-                    <!--/Metric Card-->
                 </div>
+
+                <!--Divider-->
+                <hr class="border-b-1 border-gray-400 my-6 lg:my-12 mx-4">
+
+                <div class="flex flex-row flex-wrap flex-grow mt-2">
+                    <div class="w-full md:w-1/2 p-3">
+                        <!--Table Card-->
+                        <div class="bg-white border rounded-2xl md:rounded shadow-md md:shadow p-2">
+                            <div class="border-b p-3">
+                                <h5 class="font-bold uppercase text-gray-600">Pending Requests</h5>
+                            </div>
+                            <div class="p-5">
+                                <table class="w-full p-5 text-gray-700">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left text-blue-900">Name</th>
+                                            <th class="text-right text-blue-900">Take Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-y-[1px]">
+                                            <td>
+                                                <div class="py-4">
+                                                    <p class="font-bold">Thomas Agu</p>
+                                                    <p class="text-[11px]">3 mins ago</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-right">
+                                                <button class="px-4 py-1 bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-y-[1px]">
+                                            <td>
+                                                <div class="py-4">
+                                                    <p class="font-bold">Cynthia Adebayo</p>
+                                                    <p class="text-[11px]">25 mins ago</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-right">
+                                                <button class="px-4 py-1 bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-y-[1px]">
+                                            <td>
+                                                <div class="py-4">
+                                                    <p class="font-bold">Adeleke Olu</p>
+                                                    <p class="text-[11px]">2 hrs ago</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-right">
+                                                <button class="px-4 py-1 bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <button id="see-more-pending" class="py-2 font-bold text-blue-900">See more..</button>
+
+                            </div>
+                        </div>
+                        <!--/table Card-->
+                    </div>
+
+                    <div class="w-full md:w-1/2 p-3">
+                        <!--Graph Card-->
+                        <div class="bg-white border rounded-2xl md:rounded shadow-md md:shadow">
+                            <div class="border-b p-3">
+                                <h5 class="font-bold uppercase text-gray-600">Request Graph</h5>
+                            </div>
+                            <div class="p-5">
+                                <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas>
+                                <script>
+                                new Chart(document.getElementById("chartjs-0"), {
+                                    "type": "line",
+                                    "data": {
+                                        "labels": ["January", "February", "March", "April", "May", "June", "July"],
+                                        "datasets": [{
+                                            "label": "Number of Requests",
+                                            "data": [9, 21, 11, 40, 56, 55, 40],
+                                            "fill": false,
+                                            "borderColor": "rgb(75, 192, 192)",
+                                            "lineTension": 0.1
+                                        }]
+                                    },
+                                    "options": {}
+                                });
+                                </script>
+                            </div>
+                        </div>
+                        <!--/Graph Card-->
+                    </div>
+                </div>
+                <!--/ Console Content-->
             </div>
+        </section>
+        <!--/container-->
 
-            <!--Divider-->
-            <hr class="border-b-1 border-gray-400 my-6 lg:my-12 mx-4">
+        <!--pending request page/section-->
+        <section id="pending-page" class="w-full bg-sky-50 px-6 pt-10 md:px-12 mt-[55px] lg:mt-[90px] mb-16 hidden">
+            <a href="index.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-10 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
+            <div class="w-full bg-white p-5 md:p-10 rounded-md shadow-md">
+                <table class="w-full p-5 text-gray-700 md:text-[25px]">
+                    <thead>
+                        <tr>
+                            <th class="md:text-[25px] text-left text-blue-900">Name</th>
+                            <th class="md:text-[25px] text-right text-blue-900">Take Action</th>
+                        </tr>
+                    </thead>
 
-            <div class="flex flex-row flex-wrap flex-grow mt-2">
-                <div class="w-full md:w-1/2 p-3">
-                    <!--Table Card-->
-                    <div class="bg-white border rounded-2xl md:rounded shadow-md md:shadow p-2">
-                        <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Pending Requests</h5>
-                        </div>
-                        <div class="p-5">
-                            <table class="w-full p-5 text-gray-700">
-                                <thead>
-                                    <tr>
-                                        <th class="text-left text-blue-900">Name</th>
-                                        <th class="text-right text-blue-900">Take Action</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr class="border-y-[1px]">
-                                        <td>
-                                            <div class="py-4">
-                                                <p class="font-bold">Thomas Agu</p>
-                                                <p class="text-[11px]">3 mins ago</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            <button class="px-4 py-1 bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
-                                        </td>
-                                    </tr>
-                                    <tr class="border-y-[1px]">
-                                        <td>
-                                            <div class="py-4">
-                                                <p class="font-bold">Cynthia Ade</p>
-                                                <p class="text-[11px]">25 mins ago</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            <button class="px-4 py-1 bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
-                                        </td>
-                                    </tr>
-                                    <tr class="border-y-[1px]">
-                                        <td>
-                                            <div class="py-4">
-                                                <p class="font-bold">Adeleke Olu</p>
-                                                <p class="text-[11px]">2 hrs ago</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            <button class="px-4 py-1 bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <p class="py-2 font-bold text-blue-900"><a href="#">See more..</a></p>
-
-                        </div>
-                    </div>
-                    <!--/table Card-->
-                </div>
-
-                <div class="w-full md:w-1/2 p-3">
-                    <!--Graph Card-->
-                    <div class="bg-white border rounded-2xl md:rounded shadow-md md:shadow">
-                        <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Request Graph</h5>
-                        </div>
-                        <div class="p-5">
-                            <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas>
-                            <script>
-                            new Chart(document.getElementById("chartjs-0"), {
-                                "type": "line",
-                                "data": {
-                                    "labels": ["January", "February", "March", "April", "May", "June", "July"],
-                                    "datasets": [{
-                                        "label": "Number of Requests",
-                                        "data": [9, 21, 11, 40, 56, 55, 40],
-                                        "fill": false,
-                                        "borderColor": "rgb(75, 192, 192)",
-                                        "lineTension": 0.1
-                                    }]
-                                },
-                                "options": {}
-                            });
-                            </script>
-                        </div>
-                    </div>
-                    <!--/Graph Card-->
-                </div>
+                    <tbody>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-4">
+                                    <p class="font-bold">Thomas Agu</p>
+                                    <p class="text-[11px]">3 mins ago</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-4">
+                                    <p class="font-bold">Cynthia Adebayo</p>
+                                    <p class="text-[11px]">25 mins ago</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-4">
+                                    <p class="font-bold">Adeleke Olu</p>
+                                    <p class="text-[11px]">2 hrs ago</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-4">
+                                    <p class="font-bold">Ola Opaku</p>
+                                    <p class="text-[11px]">2 hrs ago</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-4">
+                                    <p class="font-bold">James Johnson</p>
+                                    <p class="text-[11px]">1 day ago</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-4">
+                                    <p class="font-bold">Angela obi</p>
+                                    <p class="text-[11px]">2 days ago</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <!--/ Console Content-->
-        </div>
-    </div>
-    <!--/container-->
+        </section>
+        <!--pending request page/section-->
 
-    <footer class="bg-white border-t border-gray-400 shadow">
+        <!--approved request page/section-->
+        <section id="approved-page" class="w-full bg-sky-50 px-6 pt-10 md:px-12 mt-[55px] lg:mt-[90px] mb-16 hidden">
+            <a href="index.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-10 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
+            <div class="w-full bg-white p-5 md:p-10 rounded-md shadow-md">
+                <table class="w-full p-5 text-gray-700 md:text-[25px]">
+                    <thead>
+                        <tr>
+                            <th class="md:text-[25px] text-left text-blue-900">Name</th>
+                            <th class="md:text-[25px] text-right text-blue-900">View Details</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Thomas Agu</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Cynthia Adebayo</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Adeleke Olu</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Ola Opaku</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">James Johnson</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Angela obi</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Ola Opaku</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">James Johnson</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Angela obi</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!--approved request page/section-->
+
+        <!--declined request page/section-->
+        <section id="declined-page" class="w-full h-[500px] bg-sky-50 px-6 pt-10 md:px-12 mt-[55px] lg:mt-[90px] mb-16 hidden">
+            <a href="index.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-10 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
+            <div class="w-full bg-white p-5 md:p-10 rounded-md shadow-md">
+                <table class="w-full p-5 text-gray-700 md:text-[25px]">
+                    <thead>
+                        <tr>
+                            <th class="md:text-[25px] text-left text-blue-900">Name</th>
+                            <th class="md:text-[25px] text-right text-blue-900">View Details</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Micheal baxton</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                        <tr class="border-y-[1px]">
+                            <td>
+                                <div class="py-6">
+                                    <p class="font-bold">Peter black</p>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!--declined request page/section-->
+    </main>
+
+    <footer class="bg-white border-t border-b-0 border-gray-400 shadow">
         <div class=" w-full text-center text-[13px] py-8">
             © 2022 1go Technologies. All rights reserved
         </div>
@@ -291,6 +526,35 @@
         }
         return false;
     }
+
+    //to hide the container section and display the pending page
+    let contPage = document.getElementById("home");
+    let pendingPage = document.getElementById("pending-page");
+
+    let pendingBtn = document.getElementById("pending-btn");
+    let seeMorePending = document.getElementById("see-more-pending");
+    pendingBtn.addEventListener("click", () => {
+        contPage.classList.add("hidden");
+        pendingPage.classList.remove("hidden");
+    })
+    seeMorePending.addEventListener("click", () => {
+        contPage.classList.add("hidden");
+        pendingPage.classList.remove("hidden");
+    })
+
+    let approvedPage = document.getElementById("approved-page");
+    let approvedBtn = document.getElementById("approved-btn");
+    approvedBtn.addEventListener("click", () => {
+        contPage.classList.add("hidden");
+        approvedPage.classList.remove("hidden");
+    })
+
+    let declinedPage = document.getElementById("declined-page");
+    let declinedBtn = document.getElementById("declined-btn");
+    declinedBtn.addEventListener("click", () => {
+        contPage.classList.add("hidden");
+        declinedPage.classList.remove("hidden");
+    })
     </script>
 
 </body>
