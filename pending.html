@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Take action</title>
-    <meta name="description" content="Take action">
+    <title>Pending requests</title>
+    <meta name="description" content="List of peding requests">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="output.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5e43348ada.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-white font-sans leading-normal tracking-normal">
     <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-4">
             <div class="w-1/2 pl-2 md:pl-0">
-                <a class=" text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
+                <a class=" text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="index.html">
                     <i class="fas fa-sun text-blue-300 pr-3"></i> Admin Panel
                 </a>
             </div>
@@ -91,7 +92,7 @@
         </div>
     </nav>
 
-    <main class="w-full bg-sky-50 pt-[70px] pb-[50px] lg:pt-[120px]">
+    <main class="w-full bg-sky-50 pt-[70px] lg:pt-[120px]">
         <!--pending request page/section-->
         <section id="pending-page" class="w-full bg-sky-50 px-6 md:px-12">
             <h1 class="text-[25px] md:text-[40px] font-bold text-center mb-8">Pending Request</h1>
@@ -178,7 +179,7 @@
         </section>
         <!--pending request page/section-->
         <!--Take action page/section-->
-        <section id="action-page" class="w-full bg-sky-50 px-4 pb-14 hidden">
+        <section id="action-page" class="w-full bg-sky-50 px-4 pb-10 hidden">
             <a href="pending.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-6 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
             <h1 class="text-[25px] md:text-[40px] font-bold mb-4">John Doe</h1>
             <div class="w-full bg-white lg:flex lg:justify-between lg:items-center lg:px-5 rounded-lg">
@@ -237,9 +238,46 @@
                 </table>
             </div>
             <div class="mt-8 flex justify-between lg:w-[300px]">
-                <button class="px-8 py-2 text-[18px] bg-green-500 rounded-md text-white hover:bg-green-400 font-bold">Accept</button>
-                <button class="px-8 py-2 text-[18px] bg-red-500 rounded-md text-white hover:bg-red-400 font-bold">decline</button>
+                <button id="accept-request-btn" class="px-8 py-2 text-[18px] bg-green-500 rounded-md text-white hover:bg-green-400 font-bold">Accept</button>
+                <button id="decline-request-btn" class="px-8 py-2 text-[18px] bg-red-500 rounded-md text-white hover:bg-red-400 font-bold">Decline</button>
             </div>
+
+            <!--accept or decline prompt-->
+            <div id="accept-decline-prompt" class="w-[100vw] h-[140%] bg-slate-500/75 px-4 absolute top-0 left-0 flex justify-center items-top hidden">
+                <div class="w-full md:w-[400px] h-[200px] p-4 bg-white relative top-[250px]">
+                    <div id="are-you-sure" class="w-full h-[100px] p-6 mb-4 font-bold text-center"></div>
+                    <div class="w-full flex justify-between">
+                        <button id="cancel-prompt" class="px-10 py-2 text-[18px] bg-slate-400 rounded-sm text-white hover:bg-slate-300 font-bold">Cancel</button>
+                        <button id="proceed-prompt-accept" class="px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold hidden">Yes</button>
+
+                        <button id="proceed-prompt-decline" class="px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold hidden">Yes</button>
+                    </div>
+                </div>
+            </div>
+            <!--accept or decline prompt-->
+            <!--decline reason page-->
+            <div id="decline-reason-page" class="w-[100vw] h-[100%] md:h-[140%] bg-white px-4 absolute top-0 left-0 flex justify-center items-top hidden">
+                <div class="relative top-[80px] lg:top-[120px]">
+                    <h1 class="text-[25px] md:text-[40px] font-bold mb-4">Decline</h1>
+                    <form action="" method="post">
+                        <textarea id="decline-reason-input" rows="4" cols="40" placeholder="State the reason" class="focus:outline-none focus:border-blue-500 border-black border-[1px] mb-4 p-4"></textarea>
+                        <div id="submit-reason" type="submit" value="submit" class="w-[fit-content] px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold cursor-pointer">Send</div>
+                        <!--will be changed to button-->
+                    </form>
+                </div>
+            </div>
+            <!--decline reason page-->
+            <!--successfully declined page-->
+            <div id="successfully-declined-page" class="w-[100vw] h-[100%] md:h-[140%] bg-white px-4 absolute top-0 left-0 flex justify-center items-top hidden">
+                <div class="relative top-[80px] lg:top-[120px]">
+                    <div class="w-[fit-content] mx-auto text-red-500 text-[50px] mb-8">
+                        <i class="fas fa-circle-xmark"></i>
+                    </div>
+                    <div id="user-decline-msg" class="w-full h-[100px] p-6 mb-4 font-bold text-center"></div>
+                    <a href="index.html"><button class="w-full px-10 py-3 text-[18px] bg-blue-500 text-white hover:bg-blue-400 font-bold rounded-lg relative md:top-[30%] top-[50%]">Home</button></a>
+                </div>
+            </div>
+            <!--successfully declined page-->
         </section>
         <!--take action page/section-->
     </main>
@@ -312,6 +350,46 @@
             pendingPage.classList.add("hidden");
             actionPage.classList.remove("hidden");
         })
+    })
+
+    //to accept or decline request
+    let acceptBtn = document.getElementById("accept-request-btn");
+    let declineBtn = document.getElementById("decline-request-btn");
+    let acceptDeclinePrompt = document.getElementById("accept-decline-prompt");
+    let promptMsg = document.getElementById("are-you-sure");
+
+    let proceedDecline = document.getElementById("proceed-prompt-decline");
+    declineBtn.addEventListener("click", () => {
+        acceptDeclinePrompt.classList.remove("hidden");
+        promptMsg.textContent = "Are you sure you want to decline this request?";
+        proceedAccept.classList.add("hidden");
+        proceedDecline.classList.remove("hidden");
+    })
+    let proceedAccept = document.getElementById("proceed-prompt-accept");
+    acceptBtn.addEventListener("click", () => {
+        acceptDeclinePrompt.classList.remove("hidden");
+        promptMsg.textContent = "Are you sure you want to approve this request?";
+        proceedAccept.classList.remove("hidden");
+        proceedDecline.classList.add("hidden");
+    })
+
+    let cancelPrompt = document.getElementById("cancel-prompt");
+    cancelPrompt.addEventListener("click", () => {
+        acceptDeclinePrompt.classList.add("hidden");
+    })
+
+    let declineReasonPage = document.getElementById("decline-reason-page");
+    proceedDecline.addEventListener("click", () => {
+        declineReasonPage.classList.remove("hidden");
+        acceptDeclinePrompt.classList.add("hidden");
+    })
+    let submitReason = document.getElementById("submit-reason");
+    let successfullyDeclinedPage = document.getElementById("successfully-declined-page");
+    let userDeclineMsg = document.getElementById("user-decline-msg");
+    submitReason.addEventListener("click", () => {
+        declineReasonPage.classList.add("hidden");
+        successfullyDeclinedPage.classList.remove("hidden");
+        userDeclineMsg.textContent = "The request of user: John Doe has been declined.";
     })
     </script>
 
