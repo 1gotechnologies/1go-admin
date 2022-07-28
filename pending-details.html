@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pending requests</title>
-    <meta name="description" content="List of peding requests">
+    <title>Pending Details</title>
+    <meta name="description" content="Approved requests">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="output.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/5e43348ada.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-white font-sans leading-normal tracking-normal">
@@ -65,7 +64,7 @@
                         </a>
                     </li>
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="pending.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-blue-700 hover:border-blue-300">
+                        <a href="pending.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-blue-300">
                             <i class="fas fa-hourglass fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Pending Requests</span>
                         </a>
                     </li>
@@ -92,94 +91,9 @@
         </div>
     </nav>
 
-    <main class="w-full bg-sky-50 pt-[70px] lg:pt-[120px]">
-        <!--pending request page/section-->
-        <section id="pending-page" class="w-full bg-sky-50 px-6 md:px-12">
-            <h1 class="text-[25px] md:text-[40px] font-bold text-center mb-8">Pending Request</h1>
-            <a href="index.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-10 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
-            <div class="w-full bg-white p-5 md:p-10 rounded-md shadow-md">
-                <table class="w-full p-5 text-gray-700 md:text-[25px]">
-                    <thead>
-                        <tr>
-                            <th class="md:text-[25px] text-left text-blue-900">Name</th>
-                            <th class="md:text-[25px] text-right text-blue-900">Take Action</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-4">
-                                    <p class="font-bold">Thomas Agu</p>
-                                    <p class="text-[11px]">3 mins ago</p>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
-                            </td>
-                        </tr>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-4">
-                                    <p class="font-bold">Cynthia Adebayo</p>
-                                    <p class="text-[11px]">25 mins ago</p>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
-                            </td>
-                        </tr>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-4">
-                                    <p class="font-bold">Adeleke Olu</p>
-                                    <p class="text-[11px]">2 hrs ago</p>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
-                            </td>
-                        </tr>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-4">
-                                    <p class="font-bold">Ola Opaku</p>
-                                    <p class="text-[11px]">2 hrs ago</p>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
-                            </td>
-                        </tr>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-4">
-                                    <p class="font-bold">James Johnson</p>
-                                    <p class="text-[11px]">1 day ago</p>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
-                            </td>
-                        </tr>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-4">
-                                    <p class="font-bold">Angela obi</p>
-                                    <p class="text-[11px]">2 days ago</p>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        <!--pending request page/section-->
-        <!--Take action page/section-->
-        <section id="action-page" class="w-full bg-sky-50 px-4 pb-10 hidden">
+    <main class="w-full bg-sky-50 pt-[70px] pb-[50px] lg:pt-[120px]">
+        <!--view detail page/section-->
+        <section id="detail-page" class="w-full bg-sky-50 px-4 pb-14">
             <a href="pending.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-6 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
             <h1 class="text-[25px] md:text-[40px] font-bold mb-4">John Doe</h1>
             <div class="w-full bg-white lg:flex lg:justify-between lg:items-center lg:px-5 rounded-lg">
@@ -241,14 +155,13 @@
                 <button id="accept-request-btn" class="px-8 py-2 text-[18px] bg-green-500 rounded-md text-white hover:bg-green-400 font-bold">Accept</button>
                 <button id="decline-request-btn" class="px-8 py-2 text-[18px] bg-red-500 rounded-md text-white hover:bg-red-400 font-bold">Decline</button>
             </div>
-
             <!--accept or decline prompt-->
             <div id="accept-decline-prompt" class="w-[100vw] h-[140%] bg-slate-500/75 px-4 absolute top-0 left-0 flex justify-center items-top hidden">
                 <div class="w-full md:w-[400px] h-[200px] p-4 bg-white relative top-[250px]">
                     <div id="are-you-sure" class="w-full h-[100px] p-6 mb-4 font-bold text-center"></div>
                     <div class="w-full flex justify-between">
                         <button id="cancel-prompt" class="px-10 py-2 text-[18px] bg-slate-400 rounded-sm text-white hover:bg-slate-300 font-bold">Cancel</button>
-                        <button id="proceed-prompt-accept" class="px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold hidden">Yes</button>
+                        <a href="select-agency.html"><button id="proceed-prompt-accept" class="px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold hidden">Yes</button></a>
 
                         <button id="proceed-prompt-decline" class="px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold hidden">Yes</button>
                     </div>
@@ -256,9 +169,8 @@
             </div>
             <!--accept or decline prompt-->
         </section>
-        <!--take action page/section-->
         <!--decline reason page-->
-        <section id="decline-reason-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-white pt-[70px] lg:pt-[120px] mb-[300px] px-4 relative top-0 left-0 flex justify-center items-top hidden">
+        <section id="decline-reason-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-sky-50 pt-[70px] lg:pt-[120px] mb-[300px] px-4 relative top-0 left-0 flex justify-center items-top hidden">
             <div class="relative top-[0px] lg:top-[0px] px-2">
                 <h1 class="text-[25px] md:text-[40px] font-bold mb-4">Decline</h1>
                 <form action="" method="post">
@@ -270,61 +182,16 @@
         </section>
         <!--decline reason page-->
         <!--successfully declined page-->
-        <section id="successfully-declined-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-white pt-[70px] lg:pt-[120px] mb-[300px] px-4 relative top-0 left-0 flex justify-center items-top hidden">
+        <section id="successfully-declined-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-sky-50 pt-[70px] lg:pt-[120px] mb-[300px] px-4 relative top-0 left-0 flex justify-center items-top hidden">
             <div class="relative top-[80px] lg:top-[120px]">
                 <div class="w-[fit-content] mx-auto text-red-500 text-[50px] mb-3">
-                    <i class="fas fa-circle-xmark"></i>
+                    <i class="fas fa-user-minus"></i>
                 </div>
                 <div id="user-decline-msg" class="w-full h-[100px] p-6 mb-[100px] font-bold text-center"></div>
                 <a href="index.html"><button class="w-full px-10 py-3 text-[18px] bg-blue-500 text-white hover:bg-blue-400 font-bold rounded-lg relative md:bottom-[20px] bottom-[20px]">Home</button></a>
             </div>
         </section>
         <!--successfully declined page-->
-        <!--select tour agency page-->
-        <section id="tour-agency-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-white pt-[70px] lg:pt-[120px] mb-[200px] px-4 relative top-0 left-0 hidden">
-            <a href="pending.html"><button class="mb-6 px-4 py-2 bg-sky-50 text-black hover:bg-slate-50 border-white border-[3px] rounded-md font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>back</button></a>
-            <div class="w-full h-[fit-content] px-2">
-                <h1 class="text-[25px] md:text-[40px] font-bold mb-4">Select tour operator</h1>
-                <div class="w-full mt-[70px]">
-                    <div id="statspizza-tour" class="tour-agency w-full h-[70px] md:h-[100px] lg:h-[140px] border border-slate-300 rounded-md flex justify-between items-center cursor-pointer">
-                        <div class="w-[25%] h-full bg-slate-300">Logo</div>
-                        <p class="px-4 md:text-[30px]">STATSPIZZA CONSULTS LTD</p>
-                    </div>
-                    <div id="ufitfly-tour" class="tour-agency w-full h-[70px] md:h-[100px] lg:h-[140px] mt-[40px] border border-slate-300 rounded-md flex justify-between items-center cursor-pointer">
-                        <div class="w-[25%] h-full bg-slate-300">Logo</div>
-                        <p class="px-4  md:text-[30px]">UFITFLY LTD</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--select tour agency page-->
-        <!--booking slip page-->
-        <section id="booking-slip-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-white pt-[70px] lg:pt-[120px] mb-[50px] px-4 lg:px-[100px] relative top-0 left-0 hidden">
-            <a href="pending.html"><button class="mb-6 px-4 py-2 bg-sky-50 text-black hover:bg-slate-50 border-white border-[3px] rounded-md font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>back</button></a>
-            <div class="w-full h-[fit-content] px-2">
-                <h1 class="text-[25px] md:text-[40px] font-bold mb-4">Create the client's booking slip</h1>
-                <div class="w-full mt-[70px] border border-black p-4">
-                    <div class="w-[80px] h-[80px] bg-slate-300 mb-6">Logo</div>
-                    <h1 class="text-[25px] md:text-[40px] mb-8 text-center">Booking slip</h1>
-                    <form>
-                        <input type="text" id="fullname" placeholder="Full name" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Category" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Number of persons" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Tour package" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Package type" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Price" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Tour operator" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Tour guide" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Phone number (Tour guide)" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Email Address (Tour guide)" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Date" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                        <input type="text" id="fullname" placeholder="Slip code" class="w-full p-4 bg-slate-100 mb-6 rounded-md">
-                    </form>
-                </div>
-                <button class="w-full py-4 bg-blue-800 rounded-md mt-[80px] text-white hover:bg-blue-500">continue</button>
-            </div>
-        </section>
-        <!--booking slip page-->
     </main>
 
     <footer class="bg-white border-t border-b-0 border-gray-400 shadow">
@@ -335,7 +202,6 @@
 
     <script>
     /*Toggle dropdown list*/
-    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
     var userMenuDiv = document.getElementById("userMenu");
     var userMenu = document.getElementById("userButton");
@@ -385,18 +251,17 @@
         return false;
     }
 
-    /*//to hide the container section and display the pending page
-    let pendingPage = document.getElementById("pending-page");
+    /*//to hide the page content and display the user details
+    let approvedPage = document.getElementById("approved-page");
 
-    let actionPage = document.getElementById("action-page");
-    let actionBtn = document.querySelectorAll(".view-action");
-    actionBtn.forEach((item, index) => {
+    let detailPage = document.getElementById("detail-page");
+    let detailBtn = document.querySelectorAll(".view-details");
+    detailBtn.forEach((item, index) => {
         item.addEventListener("click", () => {
-            pendingPage.classList.add("hidden");
-            actionPage.classList.remove("hidden");
+            approvedPage.classList.add("hidden");
+            detailPage.classList.remove("hidden");
         })
     })*/
-
     //to accept or decline request
     let acceptBtn = document.getElementById("accept-request-btn");
     let declineBtn = document.getElementById("decline-request-btn");
@@ -427,30 +292,31 @@
 
     //to click yes after clicking decline request
     let declineReasonPage = document.getElementById("decline-reason-page");
+    let detailPage = document.getElementById("detail-page");
     proceedDecline.addEventListener("click", () => {
         declineReasonPage.classList.remove("hidden");
         acceptDeclinePrompt.classList.add("hidden");
-        actionPage.classList.add("hidden");
+        detailPage.classList.add("hidden");
     })
     //to submit the reason for declining and displaying the declined msg
     let submitReason = document.getElementById("submit-reason");
     let successfullyDeclinedPage = document.getElementById("successfully-declined-page");
     let userDeclineMsg = document.getElementById("user-decline-msg");
     submitReason.addEventListener("click", () => {
-        actionPage.classList.add("hidden");
+        detailPage.classList.add("hidden");
         declineReasonPage.classList.add("hidden");
         successfullyDeclinedPage.classList.remove("hidden");
         userDeclineMsg.textContent = "The request of user: John Doe has been declined.";
     })
 
-    //to click yes after clicking accept request
+    /*//to click yes after clicking accept request
     let selectTourAgency = document.getElementById("tour-agency-page");
     proceedAccept.addEventListener("click", () => {
         actionPage.classList.add("hidden");
         selectTourAgency.classList.remove("hidden");
         acceptDeclinePrompt.classList.add("hidden");
 
-    })
+    })*/
 
     //to choose tour agency and set booking slip
     let bookingSlipPage = document.getElementById("booking-slip-page");
@@ -463,6 +329,7 @@
         })
     })
     </script>
+
 </body>
 
 </html>

@@ -60,12 +60,12 @@
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block lg:mb-[-16px] mt-2 lg:mt-0 lg:mt-0 z-20" id="nav-content">
                 <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="index.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-blue-700 hover:border-blue-300">
+                        <a href="index.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-blue-300">
                             <i class="fas fa-home fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Home</span>
                         </a>
                     </li>
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="pending.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-blue-300">
+                        <a href="pending.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-blue-700 hover:border-blue-300">
                             <i class="fas fa-hourglass fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Pending Requests</span>
                         </a>
                     </li>
@@ -115,7 +115,7 @@
                                 </div>
                             </td>
                             <td class="text-right">
-                                <button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
                             </td>
                         </tr>
                         <tr class="border-y-[1px]">
@@ -126,7 +126,7 @@
                                 </div>
                             </td>
                             <td class="text-right">
-                                <button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
                             </td>
                         </tr>
                         <tr class="border-y-[1px]">
@@ -137,7 +137,7 @@
                                 </div>
                             </td>
                             <td class="text-right">
-                                <button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
                             </td>
                         </tr>
                         <tr class="border-y-[1px]">
@@ -148,7 +148,7 @@
                                 </div>
                             </td>
                             <td class="text-right">
-                                <button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
                             </td>
                         </tr>
                         <tr class="border-y-[1px]">
@@ -159,7 +159,7 @@
                                 </div>
                             </td>
                             <td class="text-right">
-                                <button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
                             </td>
                         </tr>
                         <tr class="border-y-[1px]">
@@ -170,7 +170,7 @@
                                 </div>
                             </td>
                             <td class="text-right">
-                                <button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button>
+                                <a href="pending-details.html"><button class="view-action px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
                             </td>
                         </tr>
                     </tbody>
@@ -385,7 +385,7 @@
         return false;
     }
 
-    //to hide the container section and display the pending page
+    /*//to hide the container section and display the pending page
     let pendingPage = document.getElementById("pending-page");
 
     let actionPage = document.getElementById("action-page");
@@ -395,7 +395,7 @@
             pendingPage.classList.add("hidden");
             actionPage.classList.remove("hidden");
         })
-    })
+    })*/
 
     //to accept or decline request
     let acceptBtn = document.getElementById("accept-request-btn");
