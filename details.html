@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Declined requests</title>
-    <meta name="description" content="List of declined requests">
+    <title>Details</title>
+    <meta name="description" content="Approved requests">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="output.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
@@ -74,7 +74,7 @@
                         </a>
                     </li>
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="declined.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-blue-700 hover:border-blue-300">
+                        <a href="declined.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-blue-300">
                             <i class="fas fa-user-minus fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">declined Requests</span>
                         </a>
                     </li>
@@ -92,45 +92,66 @@
     </nav>
 
     <main class="w-full bg-sky-50 pt-[70px] pb-[50px] lg:pt-[120px]">
-        <!--declined request page/section-->
-        <section id="declined-page" class="w-full h-[500px] bg-sky-50 px-6 md:px-12">
-            <h1 class="text-[25px] md:text-[40px] font-bold text-center mb-8">Declined Request</h1>
-            <a href="index.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-10 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
-            <div class="w-full bg-white p-5 md:p-10 rounded-md shadow-md">
-                <table class="w-full p-5 text-gray-700 md:text-[25px]">
-                    <thead>
-                        <tr>
-                            <th class="md:text-[25px] text-left text-blue-900">Name</th>
-                            <th class="md:text-[25px] text-right text-blue-900">View Details</th>
-                        </tr>
-                    </thead>
-
+        <!--view detail page/section-->
+        <section id="detail-page" class="w-full bg-sky-50 px-4 pb-14">
+            <h1 class="text-[25px] md:text-[40px] font-bold mb-4">John Doe</h1>
+            <div class="w-full bg-white lg:flex lg:justify-between lg:items-center lg:px-5 rounded-lg">
+                <div class="w-full lg:w-[40%] h-[200px] lg:h-[300px] bg-gray-200 rounded-lg lg:rounded-sm">Some Image</div>
+                <table class="w-full lg:w-[50%] mt-8 lg:mt-0 bg-white rounded-lg">
                     <tbody>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-6">
-                                    <p class="font-bold">Micheal baxton</p>
-                                </div>
+                        <tr class="">
+                            <td class="font-bold py-4 px-4">
+                                Category:
                             </td>
-                            <td class="text-right">
-                                <a href="details.html"><button class="view-details px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
+                            <td class="text-center py-4">
+                                Single
                             </td>
                         </tr>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-6">
-                                    <p class="font-bold">Peter black</p>
-                                </div>
+                        <tr class="">
+                            <td class="font-bold py-4 px-4">
+                                Number of persons:
                             </td>
-                            <td class="text-right">
-                                <a href="details.html"><button class="view-details px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
+                            <td class="text-center py-4">
+                                1
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="font-bold py-4 px-4">
+                                Email Address:
+                            </td>
+                            <td class="text-center py-4">
+                                johndoe@email.com
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="font-bold py-4 px-4">
+                                Phone Number:
+                            </td>
+                            <td class="text-center py-4">
+                                08012345678
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="font-bold py-4 px-4">
+                                Package type:
+                            </td>
+                            <td class="text-center py-4">
+                                regular
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="font-bold py-4 px-4">
+                                Price:
+                            </td>
+                            <td class="text-center py-4">
+                                NGN 1,500,000
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-        <!--declined request page/section-->
+        <!--take action page/section-->
     </main>
 
     <footer class="bg-white border-t border-b-0 border-gray-400 shadow">
@@ -141,7 +162,6 @@
 
     <script>
     /*Toggle dropdown list*/
-    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
     var userMenuDiv = document.getElementById("userMenu");
     var userMenu = document.getElementById("userButton");
@@ -183,7 +203,6 @@
         }
 
     }
-
     function checkParent(t, elm) {
         while (t.parentNode) {
             if (t == elm) { return true; }
@@ -193,13 +212,13 @@
     }
 
     /*//to hide the page content and display the user details
-    let declinedPage = document.getElementById("declined-page");
+    let approvedPage = document.getElementById("approved-page");
 
     let detailPage = document.getElementById("detail-page");
     let detailBtn = document.querySelectorAll(".view-details");
     detailBtn.forEach((item, index) => {
         item.addEventListener("click", () => {
-            declinedPage.classList.add("hidden");
+            approvedPage.classList.add("hidden");
             detailPage.classList.remove("hidden");
         })
     })*/

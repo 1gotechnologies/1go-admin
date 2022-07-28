@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Declined requests</title>
-    <meta name="description" content="List of declined requests">
+    <title>Select Tour Agency</title>
+    <meta name="description" content="Approved requests">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="output.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
@@ -74,7 +74,7 @@
                         </a>
                     </li>
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="declined.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-blue-700 hover:border-blue-300">
+                        <a href="declined.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-blue-300">
                             <i class="fas fa-user-minus fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">declined Requests</span>
                         </a>
                     </li>
@@ -91,46 +91,29 @@
         </div>
     </nav>
 
-    <main class="w-full bg-sky-50 pt-[70px] pb-[50px] lg:pt-[120px]">
-        <!--declined request page/section-->
-        <section id="declined-page" class="w-full h-[500px] bg-sky-50 px-6 md:px-12">
-            <h1 class="text-[25px] md:text-[40px] font-bold text-center mb-8">Declined Request</h1>
-            <a href="index.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-10 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
-            <div class="w-full bg-white p-5 md:p-10 rounded-md shadow-md">
-                <table class="w-full p-5 text-gray-700 md:text-[25px]">
-                    <thead>
-                        <tr>
-                            <th class="md:text-[25px] text-left text-blue-900">Name</th>
-                            <th class="md:text-[25px] text-right text-blue-900">View Details</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-6">
-                                    <p class="font-bold">Micheal baxton</p>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <a href="details.html"><button class="view-details px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
-                            </td>
-                        </tr>
-                        <tr class="border-y-[1px]">
-                            <td>
-                                <div class="py-6">
-                                    <p class="font-bold">Peter black</p>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <a href="details.html"><button class="view-details px-8 py-2 text-[18px] bg-blue-800 rounded-md text-white hover:bg-blue-500">view</button></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+    <main class="w-full bg-white pt-[70px] pb-[50px] lg:pt-[120px]">
+        <!--select tour agency page-->
+        <section id="tour-agency-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-white pt-[70px] lg:pt-[120px] mb-[200px] px-4 relative top-0 left-0">
+            <a href="pending-details.html"><button class="mb-6 px-4 py-2 bg-sky-50 text-black hover:bg-slate-50 border-white border-[3px] rounded-md font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>back</button></a>
+            <div class="w-full h-[fit-content] px-2">
+                <h1 class="text-[25px] md:text-[40px] font-bold mb-4">Select tour operator</h1>
+                <div class="w-full mt-[70px]">
+                    <a href="booking-slip.html">
+                        <div id="statspizza-tour" class="tour-agency w-full h-[70px] md:h-[100px] lg:h-[140px] border border-slate-300 rounded-md flex justify-between items-center cursor-pointer">
+                            <div class="w-[25%] h-full bg-slate-300">Logo</div>
+                            <p class="px-4 md:text-[30px]">STATSPIZZA CONSULTS LTD</p>
+                        </div>
+                    </a>
+                    <a href="booking-slip.html">
+                        <div id="ufitfly-tour" class="tour-agency w-full h-[70px] md:h-[100px] lg:h-[140px] mt-[40px] border border-slate-300 rounded-md flex justify-between items-center cursor-pointer">
+                            <div class="w-[25%] h-full bg-slate-300">Logo</div>
+                            <p class="px-4  md:text-[30px]">UFITFLY LTD</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
-        <!--declined request page/section-->
+        <!--select tour agency page-->
     </main>
 
     <footer class="bg-white border-t border-b-0 border-gray-400 shadow">
@@ -141,7 +124,6 @@
 
     <script>
     /*Toggle dropdown list*/
-    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
     var userMenuDiv = document.getElementById("userMenu");
     var userMenu = document.getElementById("userButton");
@@ -183,7 +165,6 @@
         }
 
     }
-
     function checkParent(t, elm) {
         while (t.parentNode) {
             if (t == elm) { return true; }
@@ -191,18 +172,25 @@
         }
         return false;
     }
+    /*//to click yes after clicking accept request
+    let selectTourAgency = document.getElementById("tour-agency-page");
+    proceedAccept.addEventListener("click", () => {
+        actionPage.classList.add("hidden");
+        selectTourAgency.classList.remove("hidden");
+        acceptDeclinePrompt.classList.add("hidden");
 
-    /*//to hide the page content and display the user details
-    let declinedPage = document.getElementById("declined-page");
-
-    let detailPage = document.getElementById("detail-page");
-    let detailBtn = document.querySelectorAll(".view-details");
-    detailBtn.forEach((item, index) => {
-        item.addEventListener("click", () => {
-            declinedPage.classList.add("hidden");
-            detailPage.classList.remove("hidden");
-        })
     })*/
+
+    //to choose tour agency and set booking slip
+    let bookingSlipPage = document.getElementById("booking-slip-page");
+    let tourAgencybtn = document.querySelectorAll(".tour-agency");
+
+    tourAgencybtn.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            selectTourAgency.classList.add("hidden");
+            bookingSlipPage.classList.remove("hidden");
+        })
+    })
     </script>
 
 </body>
