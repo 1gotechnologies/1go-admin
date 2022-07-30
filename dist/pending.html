@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pending requests</title>
-    <meta name="description" content="List of peding requests">
+    <meta name="description" content="List of pending requests">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="output.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
@@ -16,11 +16,12 @@
 <body class="bg-white font-sans leading-normal tracking-normal">
     <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-4">
-            <div class="w-1/2 pl-2 md:pl-0">
-                <a class=" text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="index.html">
-                    <i class="fas fa-sun text-blue-300 pr-3"></i> Admin Panel
-                </a>
-            </div>
+            <a class="w-1/2 text-gray-900 text-base text-lg md:text-xl no-underline hover:no-underline font-bold" href="index.html">
+                <div class="w-[160px] pl-2 md:pl-0 flex justify-between items-end md:items-center">
+                    <img src="explore-logo__2_-removebg-preview.png" class="w-[30px] h-auto">
+                    <p>Admin Panel</p>
+                </div>
+            </a>
             <div class="w-1/2 pr-0">
                 <div class="flex relative inline-block float-right">
                     <div class="relative text-sm">
@@ -34,12 +35,12 @@
                         </button>
                         <div id="userMenu" class="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
                             <ul class="list-reset">
-                                <li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">My account</a></li>
+                                <li><a href="account.html" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">My account</a></li>
                                 <!--<li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Notifications</a></li>-->
                                 <li>
                                     <hr class="border-t mx-2 border-gray-400">
                                 </li>
-                                <li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Logout</a></li>
+                                <li><a href="login.html" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -79,6 +80,11 @@
                             <i class="fas fa-user-minus fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">declined Requests</span>
                         </a>
                     </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="paid.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-blue-300">
+                            <i class="fas fa-check-circle fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Paid</span>
+                        </a>
+                    </li>
                 </ul>
                 <div class="lg:w-[35%] w-full relative pull-right pl-4 pr-4 md:pr-0">
                     <input type="search" placeholder="Search" class="w-full bg-gray-50 text-sm text-gray-800 transition border focus:outline-none focus:border-gray-700 rounded py-1 px-2 pl-10 appearance-none leading-normal">
@@ -97,6 +103,14 @@
         <section id="pending-page" class="w-full bg-sky-50 px-6 md:px-12">
             <h1 class="text-[25px] md:text-[40px] font-bold text-center mb-8">Pending Request</h1>
             <a href="index.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-10 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
+
+            <!--If there are no pending requests, show this div below!!!-->
+            <div class="w-full h-[300px] bg-white rounded-md shadow-lg text-center pt-[80px] mb-[100px] hidden">
+                <i class="fas fa-ban text-[50px] text-gray-400"></i><br><br>
+               <p class="text-[25px] md:text-[30px] text-gray-500"> No pending request yet!</p>
+            </div>
+            <!--If there are no pending requests, show this div above!!!-->
+
             <div class="w-full bg-white p-5 md:p-10 rounded-md shadow-md">
                 <table class="w-full p-5 text-gray-700 md:text-[25px]">
                     <thead>
