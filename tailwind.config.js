@@ -5,7 +5,12 @@ module.exports = {
     "./dist/pending.html",
     "./dist/approved.html",
     "./dist/declined.html",
-    "./dist/paid.html"
+    "./dist/paid.html",
+    "./dist/pending-details.html",
+    "./dist/details.html",
+    "./dist/login.html",
+    "./dist/register.html",
+    "./dist/account.html"
   ],
   theme: {
     extend: {},

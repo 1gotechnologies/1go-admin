@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pending Details</title>
-    <meta name="description" content="Approved requests">
+    <meta name="description" content="">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="output.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
@@ -15,11 +15,12 @@
 <body class="bg-white font-sans leading-normal tracking-normal">
     <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-4">
-            <div class="w-1/2 pl-2 md:pl-0">
-                <a class=" text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="index.html">
-                    <i class="fas fa-sun text-blue-300 pr-3"></i> Admin Panel
-                </a>
-            </div>
+            <a class="w-1/2 text-gray-900 text-base text-lg md:text-xl no-underline hover:no-underline font-bold" href="index.html">
+                <div class="w-[160px] pl-2 md:pl-0 flex justify-between items-end md:items-center">
+                    <img src="explore-logo__2_-removebg-preview.png" class="w-[30px] h-auto">
+                    <p>Admin Panel</p>
+                </div>
+            </a>
             <div class="w-1/2 pr-0">
                 <div class="flex relative inline-block float-right">
                     <div class="relative text-sm">
@@ -33,12 +34,12 @@
                         </button>
                         <div id="userMenu" class="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
                             <ul class="list-reset">
-                                <li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">My account</a></li>
+                                <li><a href="account.html" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">My account</a></li>
                                 <!--<li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Notifications</a></li>-->
                                 <li>
                                     <hr class="border-t mx-2 border-gray-400">
                                 </li>
-                                <li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Logout</a></li>
+                                <li><a href="login.html" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -78,6 +79,11 @@
                             <i class="fas fa-user-minus fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">declined Requests</span>
                         </a>
                     </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="paid.html" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-blue-300">
+                            <i class="fas fa-check-circle fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Paid</span>
+                        </a>
+                    </li>
                 </ul>
                 <div class="lg:w-[35%] w-full relative pull-right pl-4 pr-4 md:pr-0">
                     <input type="search" placeholder="Search" class="w-full bg-gray-50 text-sm text-gray-800 transition border focus:outline-none focus:border-gray-700 rounded py-1 px-2 pl-10 appearance-none leading-normal">
@@ -93,14 +99,14 @@
 
     <main class="w-full bg-sky-50 pt-[70px] pb-[50px] lg:pt-[120px]">
         <!--view detail page/section-->
-        <section id="detail-page" class="w-full bg-sky-50 px-4 pb-14">
+        <section id="detail-page" class="w-full bg-sky-50 px-4 md:px-10 pb-14">
             <a href="pending.html"><button class="bg-white hover:bg-slate-50 border-white border-[3px] rounded-md mb-6 px-4 py-1 font-medium"><i class="fas fa-arrow-left text-blue-300 pr-2 text-[16px]"></i>Back</button></a>
             <h1 class="text-[25px] md:text-[40px] font-bold mb-4">John Doe</h1>
-            <div class="w-full bg-white lg:flex lg:justify-between lg:items-center lg:px-5 rounded-lg">
+            <div class="w-full bg-white lg:flex lg:justify-between lg:items-center lg:px-5 rounded-2xl border shadow-lg">
                 <div class="w-full lg:w-[40%] h-[200px] lg:h-[300px] bg-gray-200 rounded-lg lg:rounded-sm">Some Image</div>
                 <table class="w-full lg:w-[50%] mt-8 lg:mt-0 bg-white rounded-lg">
                     <tbody>
-                        <tr class="">
+                        <tr class="border-b">
                             <td class="font-bold py-4 px-4">
                                 Category:
                             </td>
@@ -108,7 +114,7 @@
                                 Single
                             </td>
                         </tr>
-                        <tr class="">
+                        <tr class="border-b">
                             <td class="font-bold py-4 px-4">
                                 Number of persons:
                             </td>
@@ -116,7 +122,7 @@
                                 1
                             </td>
                         </tr>
-                        <tr class="">
+                        <tr class="border-b">
                             <td class="font-bold py-4 px-4">
                                 Email Address:
                             </td>
@@ -124,7 +130,7 @@
                                 johndoe@email.com
                             </td>
                         </tr>
-                        <tr class="">
+                        <tr class="border-b">
                             <td class="font-bold py-4 px-4">
                                 Phone Number:
                             </td>
@@ -132,7 +138,7 @@
                                 08012345678
                             </td>
                         </tr>
-                        <tr class="">
+                        <tr class="border-b">
                             <td class="font-bold py-4 px-4">
                                 Package type:
                             </td>
@@ -161,7 +167,7 @@
                     <div id="are-you-sure" class="w-full h-[100px] p-6 mb-4 font-bold text-center"></div>
                     <div class="w-full flex justify-between">
                         <button id="cancel-prompt" class="px-10 py-2 text-[18px] bg-slate-400 rounded-sm text-white hover:bg-slate-300 font-bold">Cancel</button>
-                        <a href="select-agency.html"><button id="proceed-prompt-accept" class="px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold hidden">Yes</button></a>
+                        <button id="proceed-prompt-accept" class="px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold hidden">Yes</button>
 
                         <button id="proceed-prompt-decline" class="px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold hidden">Yes</button>
                     </div>
@@ -170,17 +176,18 @@
             <!--accept or decline prompt-->
         </section>
         <!--decline reason page-->
-        <section id="decline-reason-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-sky-50 pt-[70px] lg:pt-[120px] mb-[300px] px-4 relative top-0 left-0 flex justify-center items-top hidden">
+        <section id="decline-reason-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-sky-50 pt-[70px] lg:pt-[120px] mb-[300px] px-4 relative top-0 left-0 text-center hidden">
             <div class="relative top-[0px] lg:top-[0px] px-2">
                 <h1 class="text-[25px] md:text-[40px] font-bold mb-4">Decline</h1>
                 <form action="" method="post">
                     <textarea id="decline-reason-input" rows="4" cols="35" placeholder="State the reason" class="focus:outline-none focus:border-blue-500 border-black border-[1px] mb-4 p-4"></textarea>
-                    <div id="submit-reason" type="submit" value="submit" class="w-[fit-content] px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold cursor-pointer">Send</div>
+                    <div id="submit-reason" type="submit" value="submit" class="w-[fit-content] m-auto px-10 py-2 text-[18px] bg-blue-500 rounded-sm text-white hover:bg-blue-400 font-bold cursor-pointer">Send</div>
                     <!--will be changed to button-->
                 </form>
             </div>
         </section>
         <!--decline reason page-->
+
         <!--successfully declined page-->
         <section id="successfully-declined-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-sky-50 pt-[70px] lg:pt-[120px] mb-[300px] px-4 relative top-0 left-0 flex justify-center items-top hidden">
             <div class="relative top-[80px] lg:top-[120px]">
@@ -192,6 +199,18 @@
             </div>
         </section>
         <!--successfully declined page-->
+
+        <!--successfully approved page-->
+        <section id="successfully-approved-page" class="w-[100vw] mt-[-50px] lg:mt-[-120px] bg-sky-50 pt-[70px] lg:pt-[120px] mb-[300px] px-4 relative top-0 left-0 flex justify-center items-top hidden">
+            <div class="relative top-[80px] lg:top-[120px]">
+                <div class="w-[fit-content] mx-auto text-green-500 text-[50px] mb-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div id="user-approve-msg" class="w-full h-[100px] p-6 mb-[100px] font-bold text-center"></div>
+                <a href="index.html"><button class="w-full px-10 py-3 text-[18px] bg-blue-500 text-white hover:bg-blue-400 font-bold rounded-lg relative md:bottom-[20px] bottom-[20px]">Home</button></a>
+            </div>
+        </section>
+        <!--successfully approved page-->
     </main>
 
     <footer class="bg-white border-t border-b-0 border-gray-400 shadow">
@@ -309,16 +328,17 @@
         userDeclineMsg.textContent = "The request of user: John Doe has been declined.";
     })
 
-    /*//to click yes after clicking accept request
-    let selectTourAgency = document.getElementById("tour-agency-page");
+    //to click yes after clicking accept request
+    let successfullyApprovedPage = document.getElementById("successfully-approved-page");
+    let userApproveMsg = document.getElementById("user-approve-msg");
     proceedAccept.addEventListener("click", () => {
-        actionPage.classList.add("hidden");
-        selectTourAgency.classList.remove("hidden");
-        acceptDeclinePrompt.classList.add("hidden");
+        detailPage.classList.add("hidden");
+        successfullyApprovedPage.classList.remove("hidden");
+        userApproveMsg.textContent = "The request of user: John Doe has been accepted!";
 
-    })*/
+    })
 
-    //to choose tour agency and set booking slip
+    /*//to choose tour agency and set booking slip
     let bookingSlipPage = document.getElementById("booking-slip-page");
     let tourAgencybtn = document.querySelectorAll(".tour-agency");
 
@@ -327,7 +347,7 @@
             selectTourAgency.classList.add("hidden");
             bookingSlipPage.classList.remove("hidden");
         })
-    })
+    })*/
     </script>
 
 </body>
