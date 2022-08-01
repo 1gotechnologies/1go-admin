@@ -7,6 +7,7 @@ module.exports = {
     "./dist/declined.html",
     "./dist/paid.html",
     "./dist/pending-details.html",
+    "./dist/declined-details.html",
     "./dist/details.html",
     "./dist/login.html",
     "./dist/register.html",
