@@ -97,67 +97,123 @@
         </div>
     </nav>
 
-    <main class="w-full bg-sky-50 pt-[70px] pb-[50px] lg:pt-[120px]">
-        <!--view detail page/section-->
-        <section id="detail-page" class="w-full bg-sky-50 px-4 pb-14">
-            <h1 class="text-[25px] md:text-[40px] font-bold mb-4">John Doe</h1>
-            <div class="w-full bg-white lg:flex lg:justify-between lg:items-center lg:px-5 rounded-lg">
-                <div class="w-full lg:w-[40%] h-[200px] lg:h-[300px] bg-gray-200 rounded-lg lg:rounded-sm">Some Image</div>
-                <table class="w-full lg:w-[50%] mt-8 lg:mt-0 bg-white rounded-lg">
-                    <tbody>
-                        <tr class="">
-                            <td class="font-bold py-4 px-4">
-                                Category:
-                            </td>
-                            <td class="text-center py-4">
-                                Single
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="font-bold py-4 px-4">
-                                Number of persons:
-                            </td>
-                            <td class="text-center py-4">
-                                1
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="font-bold py-4 px-4">
-                                Email Address:
-                            </td>
-                            <td class="text-center py-4">
-                                johndoe@email.com
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="font-bold py-4 px-4">
-                                Phone Number:
-                            </td>
-                            <td class="text-center py-4">
-                                08012345678
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="font-bold py-4 px-4">
-                                Package type:
-                            </td>
-                            <td class="text-center py-4">
-                                regular
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="font-bold py-4 px-4">
-                                Price:
-                            </td>
-                            <td class="text-center py-4">
-                                NGN 1,500,000
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+    <main class="w-full min-h-[90vh] bg-sky-50 pt-[70px] pb-[80px] lg:pt-[120px]">
+        <section id="declined-page" class="w-full bg-sky-50 px-2 md:px-12">
+            <div class="w-full p-3">
+                <div class="bg-white w-full h-full text-[18px] rounded-2xl shadow-lg text-center border p-4">
+                    <h1 class="text-[25px] font-bold text-center">John Doe</h1>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap mb-[0px]">
+                <div class="w-full h-[150] md:h-[170px] md:w-1/2 xl:w-1/3 p-3">
+                    <div class="bg-white w-full h-full text-[18px] rounded-2xl shadow-lg text-center border p-6">
+                        <div class="flex justify-between">
+                            <i class="fas fa-money-check text-[50px] md:text-[70px] text-slate-600"></i>
+                            <div class="text-right">
+                                <p class=" text-[18px] md:text-[20px] text-slate-500 font-bold text-center">Total times paid</p>
+                                <p class="font-bold text-[30px]">2 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[150] md:h-[170px] md:w-1/2 xl:w-1/3 p-3">
+                    <div class="bg-white w-full h-full text-[18px] rounded-2xl shadow-lg text-center border p-6">
+                        <div class="flex justify-between">
+                            <i class="fas fa-location-arrow text-[50px] md:text-[70px] text-sky-500"></i>
+                            <div class="text-right">
+                                <p class="text-[20px] text-slate-500 font-bold text-center">Locations Travelled</p>
+                                <p class="font-bold text-[30px]">2 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[150] md:h-[170px] md:w-1/2 xl:w-1/3 p-3">
+                    <div class="bg-white w-full h-full text-[18px] rounded-2xl shadow-lg text-center border p-6">
+                        <div class="flex justify-between">
+                            <i class="fas fa-money-bill-wave text-[50px] md:text-[70px] text-lime-500"></i>
+                            <div class="text-right">
+                                <p class="text-[20px] text-slate-500 font-bold text-center">Total Expenses</p>
+                                <p class="font-bold text-[22px]">NGN 1.250M <span class="text-green-500"><i class="fas fa-caret-up"></i></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap">
+                <div class="w-full md:w-1/2 p-3">
+                    <div class="bg-white w-full h-full  border rounded-2xl shadow-lg text-center">
+                        <div class="border-b p-3">
+                            <h5 class="font-bold uppercase text-gray-600">Transaction History</h5>
+                        </div>
+                        <!--show this if there's no data-->
+                        <div class="hidden">
+                            <br><br>
+                            <p class="text-[30px] text-slate-300">No history yet!</p>
+                        </div>
+                        <!--show this if there's no data-->
+                        <div class="w-full p-6">
+                            <div class="w-full bg-slate-100 py-3 px-4 mb-[20px] rounded flex justify-between items-centers">
+                                <div class="w-2/3 font-bold text-left">
+                                    <p>Payment with card</p>
+                                    <p class="text-slate-400">dd-mm-yyyy | time</p>
+                                </div>
+                                <p class="font-bold text-[20px]">NGN 700,000</p>
+                            </div>
+                            <div class="w-full bg-slate-100 py-3 px-4 rounded flex justify-between items-centers">
+                                <div class="w-2/3 font-bold text-left">
+                                    <p>Payment with card</p>
+                                    <p class="text-slate-400">dd-mm-yyyy | time</p>
+                                </div>
+                                <p class="font-bold text-[20px]">NGN 550,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 p-3">
+                    <!--Table Card-->
+                    <div class="bg-white border rounded-2xl shadow-lg p-2">
+                        <div class="border-b p-3">
+                            <h5 class="font-bold uppercase text-gray-600 text-center">Tickets booked</h5>
+                        </div>
+                        <div class="px-5">
+                            <!--show this if there's no data-->
+                            <div class="hidden">
+                                <br><br>
+                                <p class="text-[30px] text-slate-300">No history yet!</p>
+                            </div>
+                            <!--show this if there's no data-->
+                            <table class="w-full px-5 pb-5 text-gray-700">
+                                <tbody>
+                                    <tr class="border-b-[1px]">
+                                        <td>
+                                            <div class="py-4">
+                                                <p class="font-bold"><i class="fas fa-money-check text-[18px] text-slate-600"></i> Ticket type</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">
+                                            <p class="text-[14px] text-slate-400 font-bold">1 month ago</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-y-[1px]">
+                                        <td>
+                                            <div class="py-4">
+                                                <p class="font-bold"><i class="fas fa-money-check text-[18px] text-slate-600"></i> Ticket type</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">
+                                            <p class="text-[14px] text-slate-400 font-bold">3 months ago</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <a href="#"><button id="see-more-pending" class="py-2 font-bold text-blue-900">See more..</button></a>
+
+                        </div>
+                    </div>
+                    <!--/table Card-->
             </div>
         </section>
-        <!--take action page/section-->
     </main>
 
     <footer class="bg-white border-t border-b-0 border-gray-400 shadow">
