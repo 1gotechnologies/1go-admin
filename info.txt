@@ -1,0 +1,14 @@
+// all changes made
+## The footer has been fixed.(in all html files)
+## Minor necessary tweaks in all html files
+## The new user-details page has been added. name: details.html
+## In the pending-details.html pages, phone number has been replaced with reference code.
+
+//Below are the files that contains significant changes that NEEDS to be added to your end.
+## All html files.
+## output.css
+## tailwind.config.js(which is in the root directory)
+
+//where to find the changed files
+## All changed files are in the dist folder
+## The only changed file(s) outside the dist folder is the "tailwind.config.js" file.
