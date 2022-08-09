@@ -32,4 +32,19 @@ const SLink = styled(NavLink)`
     font-weight: 600;
   }
 `;
-export { Btn, Input, SLink };
+
+const DCard = styled.div`
+  border-radius: 0.5rem;
+  border: #acaaaa;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+`;
+
+const OverlayShade = styled.div`
+  background: rgba(0 0 0 0.2);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+`;
+export { Btn, Input, SLink, DCard };

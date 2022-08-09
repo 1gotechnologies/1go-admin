@@ -5,8 +5,8 @@ import MainLayout from "../layout/MainLayout";
 export default function Register() {
   return (
     <MainLayout auth>
-      <form className="w-full fixed top-0 md:relative h-screen md:h-fit flex flex-wrap items-end md:items-center justify-around gap-7 md:gap-2 p-10 overflow-x-auto">
-        <div className="container lg:w-[35%] text-center lg:text-left flex flex-col gap-6 grow">
+      <form className="w-full relative min-h-full flex flex-wrap items-end md:items-center justify-around gap-7 md:gap-2 md:p-10">
+        <div className="container lg:w-[35%] text-center lg:text-left flex flex-col gap-6 grow self-start">
           <h4 className="text-[32px] md:text-3xl lg:text-4xl md:font-bold">
             Register
           </h4>

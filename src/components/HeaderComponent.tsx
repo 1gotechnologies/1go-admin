@@ -23,7 +23,7 @@ const HeaderComponent = () => {
   const toggleNav = () => setShow(!show);
 
   return (
-    <header className="md:bg-white sticky w-full z-50 top-0 flex justify-between p-3 md:py-0 md:shadow">
+    <header className="bg-[#FCFCFC] md:bg-white sticky w-full z-50 top-0 flex justify-between p-3 md:py-0 md:shadow">
       <div className={"md:hidden p-2"}>
         {!isHome && (
           <Btn onClick={goBack}>

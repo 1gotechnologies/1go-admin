@@ -16,7 +16,7 @@ export default function Login() {
   return (
     <MainLayout auth>
       <form
-        className="w-full fixed top-0 md:relative h-screen md:h-fit flex flex-wrap items-end md:items-center justify-around gap-7 md:gap-2 p-10 overflow-x-auto"
+        className="w-full relative min-h-full flex flex-wrap items-end md:items-center justify-around gap-7 md:gap-2 md:p-10"
         onSubmit={login}
       >
         <div className="container md:w-[35%] text-center md:text-left flex flex-col gap-6 grow">
@@ -53,7 +53,7 @@ export default function Login() {
             <Btn
               type="button"
               onClick={() => setShowPwd(!showPwd)}
-              className="!absolute !right-10"
+              className="!absolute !right-0 md:!right-10"
             >
               {!showPwd && <VscEye size={"24px"} className="opacity-50" />}
               {showPwd && <VscEyeClosed size={"24px"} className="opacity-50" />}

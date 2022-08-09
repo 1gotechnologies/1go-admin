@@ -17,7 +17,7 @@ const HeaderComponent = () => {
   const toggleNav = () => setShow(!show);
 
   return (
-    <header className="sticky w-full z-50 top-0 flex justify-between p-3 md:py-0">
+    <header className="sticky w-full z-50 top-0 flex justify-between p-3 md:py-0 bg-[#FCFCFC]">
       <div className="container max-w-screen-lg flex flex-wrap justify-between lg:gap-x-[10rem] items-center mt-0 py-4">
         <NavLink
           className="text-gray-900 text-lg md:text-xl no-underline font-bold min-w-fit"
