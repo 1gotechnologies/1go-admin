@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEventHandler, useState } from "react";
 import { Link } from "react-router-dom";
 import { Btn, Input } from "../components/Styled";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
@@ -9,7 +9,8 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showPwd, setShowPwd] = useState(false);
 
-  const login = async () => {
+  const login: FormEventHandler = async (e) => {
+    e.preventDefault();
     console.log("login");
   };
 

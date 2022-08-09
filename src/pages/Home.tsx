@@ -2,10 +2,13 @@ import styled from "styled-components";
 import MainLayout from "../layout/MainLayout";
 import { HiOutlineSearch } from "react-icons/hi";
 import { FormEventHandler, useState } from "react";
-import { DCard } from "../components/Styled";
+import { Btn, DCard, OverlayShade } from "../components/Styled";
+import { CgClose } from "react-icons/cg";
+import { Search } from "../components/Search";
 
 export default function Home() {
   const [agency, setAgency] = useState("STATSPIZZA CONSULTS LTD");
+  const [openSearch, setOpenSearch] = useState(false);
 
   const search: FormEventHandler = (e) => {
     e.preventDefault();
@@ -15,19 +18,23 @@ export default function Home() {
   return (
     <MainLayout>
       <div>
-        <div className="sticky top-[5rem] bg-[#FCFCFC] z-10 scale-[105%]">
-          <form onSubmit={search} className="pb-2">
+        <div className="sticky top-[5rem] bg-[#FCFCFC] z-10 scale-[105%] md:scale-[100%]">
+          {/* search agency */}
+          <div
+            onClick={() => setOpenSearch(!openSearch)}
+            className="pb-2 cursor-pointer"
+          >
             <div className="bg-[#F2F2F2] px-2 flex items-center justify-around relative container">
               <HiOutlineSearch className="min-w-[20px] h-auto absolute left-2" />
-              <input
-                type="search"
-                className="bg-inherit grow text-lg outline-none border-none pl-5 py-2"
-              />
+              <div className="bg-inherit grow py-3 pl-8">
+                Search tour operators
+              </div>
             </div>
-          </form>
+          </div>
 
+          {/* aggency */}
           <div className="flex justify-between my-4 gap-2 container">
-            <div className="text-ellipsis grow truncate">
+            <div className="text-ellipsis grow truncate max-w-[40%]">
               <h5 className="text-[20px] font-normal">{agency}</h5>
             </div>
 
@@ -72,6 +79,18 @@ export default function Home() {
           <h2 className="text-[45px] font-light">66</h2>
           <p>Overall applications</p>
         </section>
+
+        {openSearch && (
+          <OverlayShade className="bg-slate-800 bg-opacity-25 overflow-y-auto pt-10">
+            <Btn
+              onClick={() => setOpenSearch(!openSearch)}
+              className="z-[9999999999] fixed top-5 right-5"
+            >
+              <CgClose fontSize={"1.8rem"} />
+            </Btn>
+            <Search />
+          </OverlayShade>
+        )}
       </div>
     </MainLayout>
   );

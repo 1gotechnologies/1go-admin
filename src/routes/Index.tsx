@@ -18,8 +18,14 @@ const Index = () => {
   return (
     <Routes>
       <Route path="/" element={auth ? <Home /> : <Navigate to={"login"} />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+      <Route
+        path="/login"
+        element={!auth ? <Login /> : <Navigate to={"/"} />}
+      />
+      <Route
+        path="/register"
+        element={!auth ? <Register /> : <Navigate to={"/"} />}
+      />
     </Routes>
   );
 };
