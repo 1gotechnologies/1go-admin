@@ -1,4 +1,5 @@
-import React, { Children } from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import AuthHeaderComponent from "../components/AuthHeaderComponent";
 import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
@@ -8,6 +9,18 @@ export interface Props {
   auth?: boolean;
 }
 const MainLayout: React.FC<Props> = (props) => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // "document.documentElement.scrollTo" is the magic for React Router Dom v6
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+      // behavior: "instant", // Optional if you want to skip the scrolling animation
+    });
+  }, [pathname]);
+
   return (
     <main className="flex flex-col justify-between bg-[#FCFCFC] min-h-screen">
       {!props.auth && <HeaderComponent />}
