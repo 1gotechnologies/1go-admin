@@ -2,9 +2,11 @@ import styled from "styled-components";
 import MainLayout from "../layout/MainLayout";
 import { HiOutlineSearch } from "react-icons/hi";
 import { FormEventHandler, useState } from "react";
-import { Btn, DCard, OverlayShade } from "../components/Styled";
+import { Btn, OverlayShade } from "../components/Styled";
 import { CgClose } from "react-icons/cg";
 import { Search } from "../components/Search";
+import SummaryCard from "../components/SummaryCard";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [agency, setAgency] = useState("STATSPIZZA CONSULTS LTD");
@@ -18,61 +20,47 @@ export default function Home() {
   return (
     <MainLayout>
       <div>
-        <div className="sticky top-[5rem] bg-[#FCFCFC] z-10 scale-[105%] md:scale-[100%]">
-          {/* search agency */}
-          <div
-            onClick={() => setOpenSearch(!openSearch)}
-            className="pb-2 cursor-pointer"
-          >
-            <div className="bg-[#F2F2F2] px-2 flex items-center justify-around relative container">
-              <HiOutlineSearch className="min-w-[20px] h-auto absolute left-2" />
-              <div className="bg-inherit grow py-3 pl-8">
-                Search tour operators
-              </div>
+        {/* search agency */}
+        <div
+          onClick={() => setOpenSearch(!openSearch)}
+          className="pb-2 cursor-pointer sticky top-[3.8rem] bg-[#FCFCFC] z-10 scale-[105%] md:scale-[100%]"
+        >
+          <div className="bg-[#F2F2F2] px-2 flex items-center justify-around relative container">
+            <HiOutlineSearch className="min-w-[20px] h-auto absolute left-2" />
+            <div className="bg-inherit grow py-3 pl-8">
+              Search tour operators
             </div>
-          </div>
-
-          {/* aggency */}
-          <div className="flex justify-between my-4 gap-2 container">
-            <div className="text-ellipsis grow truncate max-w-[40%]">
-              <h5 className="text-[20px] font-normal">{agency}</h5>
-            </div>
-
-            <select name="" id="" className="bg-inherit max-w-[30%]">
-              <option value="2022FWC">2022 FIFA world cup</option>
-              <option value="all">All</option>
-            </select>
           </div>
         </div>
 
+        {/* agency */}
+        <div className="flex justify-between my-4 gap-2 container sticky top-[6.5rem] pb-2 bg-[#FCFCFC] z-10">
+          <div className="text-ellipsis grow truncate max-w-[40%]">
+            <h5 className="text-[20px] font-normal">{agency}</h5>
+          </div>
+
+          <select name="" id="" className="bg-inherit max-w-[30%]">
+            <option value="2022FWC">2022 FIFA world cup</option>
+            <option value="all">All</option>
+          </select>
+        </div>
+
         <section className="container flex flex-wrap lg:flex-nowrap justify-around gap-y-10 gap-x-5 sm:gap-10">
-          <DCard className="h-[120px] min-w-[150px] lg:min-w-[200px] bg-white flex flex-col justify-end items-center">
-            <h5 className="text-[40px] leading-6 grow self-center flex items-center">
-              <p>17</p>
-            </h5>
-            <p>Pending</p>
-          </DCard>
+          <Link to={"pending/qety"}>
+            <SummaryCard type="pending" value={17} />
+          </Link>
 
-          <DCard className="h-[120px] min-w-[150px] lg:min-w-[200px] bg-white flex flex-col justify-end items-center">
-            <h5 className="text-[40px] leading-6 grow self-center flex items-center text-[#DD1622]">
-              <p>11</p>
-            </h5>
-            <p>Declined</p>
-          </DCard>
+          <Link to={"declined/qety"}>
+            <SummaryCard type="declined" value={11} />
+          </Link>
 
-          <DCard className="h-[120px] min-w-[150px] lg:min-w-[200px] bg-white flex flex-col justify-end items-center">
-            <h5 className="text-[40px] leading-6 grow self-center flex items-center text-[#1F66D0]">
-              <p>38</p>
-            </h5>
-            <p>Appproved</p>
-          </DCard>
+          <Link to={"approved/qety"}>
+            <SummaryCard type="approved" value={38} />
+          </Link>
 
-          <DCard className="h-[120px] min-w-[150px] lg:min-w-[200px] bg-white flex flex-col justify-end items-center">
-            <h5 className="text-[40px] leading-6 grow self-center flex items-center text-[#46CC63]">
-              <p>24</p>
-            </h5>
-            <p>Paid</p>
-          </DCard>
+          <Link to={"paid/qety"}>
+            <SummaryCard type="paid" value={24} />
+          </Link>
         </section>
 
         <section className="container my-5 text-center bottom-0 left-0 right-0">

@@ -1,9 +1,9 @@
 import MainLayout from "../layout/MainLayout";
 
-export default function HomePage() {
+export default function PendingDetails() {
   return (
     <MainLayout>
-      <div>Homepage</div>
+      <div>PendingDetails</div>
     </MainLayout>
   );
 }

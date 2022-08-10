@@ -1,28 +1,27 @@
-import { useState, useRef, useEffect } from "react";
-import { Btn } from "./Styled";
-
-export interface Props {
-  label: React.ReactElement;
-  content: React.ReactElement;
+interface Props {
+  type: "pending" | "approved" | "declined" | "paid";
+  value: string | number;
 }
 
 const SummaryCard: React.FC<Props> = (props) => {
-  const [show, setShow] = useState(false);
-  const parent = useRef(null);
-
-  const reveal = () => setShow(!show);
-
   return (
-    <div ref={parent} className="flex flex-col gap-2 w-full">
-      <Btn className="dropdown-label whitespace-nowrap" onClick={reveal}>
-        {props.label}
-      </Btn>
-      {show && (
-        <div className="dropdown-content z-50 bottom-[-100%]">
-          {" "}
-          {props.content}{" "}
-        </div>
-      )}
+    <div className="rounded-3xl border-[##ACAAAA] border shadow-[rgba(0, 0, 0, 0.25)] shadow-md p-2 h-[120px] min-w-[150px] lg:min-w-[200px] bg-white flex flex-col justify-end items-center">
+      <h5 className="text-[40px] leading-6 grow self-center flex items-center">
+        <p
+          className={
+            props.type === "declined"
+              ? "text-[#DD1622]"
+              : props.type === "approved"
+              ? "text-[#1F66D0]"
+              : props.type === "paid"
+              ? "text-[#46CC63]"
+              : ""
+          }
+        >
+          {props.value}
+        </p>
+      </h5>
+      <p className="capitalize"> {props.type} </p>
     </div>
   );
 };

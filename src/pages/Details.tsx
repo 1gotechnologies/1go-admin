@@ -1,9 +1,9 @@
 import MainLayout from "../layout/MainLayout";
 
-export default function HomePage() {
+export default function Details() {
   return (
     <MainLayout>
-      <div>Homepage</div>
+      <div>Details</div>
     </MainLayout>
   );
 }

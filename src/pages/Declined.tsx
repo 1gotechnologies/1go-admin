@@ -1,9 +1,9 @@
 import MainLayout from "../layout/MainLayout";
 
-export default function Pending() {
+export default function Declined() {
   return (
     <MainLayout>
-      <div>Pending</div>
+      <div>Declined</div>
     </MainLayout>
   );
 }

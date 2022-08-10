@@ -20,7 +20,7 @@ export const Search = () => {
     <div className="flex flex-col justify-around gap-10 h-full container">
       <form
         onSubmit={submit}
-        className="container max-w-md sticky top-10 pb-10 px-5 md:px-0"
+        className="container max-w-md sticky top-10 pb-10 px-5 sm:px-0"
       >
         <input
           className="bg-white w-full p-2 outline-none"

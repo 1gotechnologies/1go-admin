@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import { RiUser4Line } from "react-icons/ri";
 import { BiArrowBack } from "react-icons/bi";
 import Dropdown from "./Dropdown";
 import { CgMenuMotion, CgClose } from "react-icons/cg";
 import { Btn, SLink } from "./Styled";
+import logo from "../assets/logo.png";
 
 const HeaderComponent = () => {
   const [user, setUser] = useState("Admin");
@@ -17,14 +17,15 @@ const HeaderComponent = () => {
 
   useEffect(() => {
     setIsHome(location.pathname === "/");
+    show ? toggleNav() : null;
   }, [location]);
   const goBack = () => navigate(-1);
 
   const toggleNav = () => setShow(!show);
 
   return (
-    <header className="bg-[#FCFCFC] md:bg-white sticky w-full z-50 top-0 flex justify-between p-3 md:py-0 md:shadow">
-      <div className={"md:hidden p-2"}>
+    <header className="bg-[#FCFCFC] md:bg-white sticky w-full z-40 md:z-50 top-0 flex justify-between p-3 md:py-0 md:shadow">
+      <div className={"md:hidden pt-2"}>
         {!isHome && (
           <Btn onClick={goBack}>
             <BiArrowBack fontSize={"1.8rem"} />
@@ -38,32 +39,67 @@ const HeaderComponent = () => {
           to="/"
         >
           <div className="pl-2 md:pl-0 flex gap-2 justify-between items-end md:items-center">
-            <img src="logo.png" className="w-[35px] h-auto" />
+            <img src={logo} className="w-[35px] h-auto" />
             <h1 className="hidden md:block">Admin</h1>
           </div>
         </NavLink>
 
         <div
-          className={`flex justify-between grow self-center max-w-[80vw] top-14 md:top-0  duration-500 transition-all fixed md:relative flex-wrap-reverse md:flex-nowrap md:flex-row
+          className={`flex justify-between grow self-center max-w-[80vw] top-14 md:top-0 z-50 duration-500 transition-all fixed md:relative flex-wrap-reverse md:flex-nowrap md:flex-row
             ${
               show
-                ? "  bg-white shadow md:shadow-none p-3 rounded-lg right-0 "
+                ? "  bg-white shadow md:shadow-none pt-3 pb-10 max-h-[80vh] overflow-y-auto rounded-lg right-0 "
                 : " right-[-100vw] md:right-0 "
             }`}
         >
           <div className="hidden md:flex md:grow" />
 
-          <nav className="flex flex-col md:flex-nowrap md:flex-row gap-5 w-full md:w-[50%] items-start md:items-center">
-            <SLink to="/">Home</SLink>
-            <SLink to="/pending">Pending</SLink>
-            <SLink to="/declined">Declined</SLink>
-            <SLink to="/approved">Approved</SLink>
-            <SLink to="/paid">Paid</SLink>
+          <nav className="flex flex-col md:flex-nowrap md:flex-row md:gap-1 lg:gap-5 grow lg:w-full max-w-screen-sm items-start md:items-center md:justify-end lg:justify-center">
+            <SLink
+              to="/"
+              className={
+                "py-4 px-2  md:px-1 border-[#D9D9D9] border-x-0 border-y-[.5px] w-full md:border-0"
+              }
+            >
+              Home
+            </SLink>
+            <SLink
+              to="/pending"
+              className={
+                "py-4 px-2  md:px-1 border-[#D9D9D9] border-x-0 border-b-[.5px] w-full md:border-0"
+              }
+            >
+              Pending
+            </SLink>
+            <SLink
+              to="/declined"
+              className={
+                "py-4 px-2  md:px-1 border-[#D9D9D9] border-x-0 border-b-[.5px] w-full md:border-0"
+              }
+            >
+              Declined
+            </SLink>
+            <SLink
+              to="/approved"
+              className={
+                "py-4 px-2  md:px-1 border-[#D9D9D9] border-x-0 border-b-[.5px] w-full md:border-0"
+              }
+            >
+              Approved
+            </SLink>
+            <SLink
+              to="/paid"
+              className={
+                "py-4 px-2  md:px-1 border-[#D9D9D9] border-x-0 border-b-[.5px] w-full md:border-0"
+              }
+            >
+              Paid
+            </SLink>
           </nav>
 
-          <div className="md:flex md:grow" />
+          <div className="md:flex lg:grow lg:min-w-[4rem]" />
 
-          <div className="relative grow md:shrink md:max-w-fit w-[20vmin]">
+          <div className="relative w-full grow flex items-center justify-center md:shrink md:max-w-fit md:w-[20vmin]">
             <Dropdown
               label={
                 <span className="flex gap-2">
@@ -72,7 +108,7 @@ const HeaderComponent = () => {
                 </span>
               }
               content={
-                <div className="bg-white md:shadow md:rounded-md p-3 border-[#ccc] border-y md:border-0  flex flex-col relative md:absolute w-full right-2">
+                <div className="bg-white md:shadow md:rounded-md p-3 border-[#ccc] border-y md:border-0  flex flex-col relative md:absolute w-fit right-2">
                   <SLink to={"/"} className=" whitespace-nowrap">
                     My Account
                   </SLink>
@@ -83,7 +119,7 @@ const HeaderComponent = () => {
           </div>
         </div>
       </div>
-      <Btn onClick={toggleNav} className={"md:hidden p-2"}>
+      <Btn onClick={toggleNav} className={"md:hidden pt-2"}>
         {!show && <CgMenuMotion fontSize={"1.8rem"} />}
         {show && <CgClose fontSize={"1.8rem"} />}
       </Btn>
