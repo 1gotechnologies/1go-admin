@@ -29,7 +29,9 @@ export const Search = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
       </form>
-      <section className="container max-w-md bg-white overflow-y-auto grow"></section>
+      <section className="container max-w-xl overflow-y-auto grow px-1">
+        <div className="bg-white h-full"></div>
+      </section>
     </div>
   );
 };

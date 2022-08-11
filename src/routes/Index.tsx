@@ -4,6 +4,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Account from "../pages/Account";
 import Approved from "../pages/Approved";
 import Declined from "../pages/Declined";
+import ListPage from "../pages/ListPage";
 import Details from "../pages/Details";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -24,31 +25,34 @@ const Index = () => {
 
   return (
     <Routes>
-      <Route path="/" element={auth ? <Home /> : <Navigate to={"login"} />} />
+      <Route
+        path="/"
+        // exact={true}
+        element={auth ? <Home /> : <Navigate to={"login"} />}
+      />
       <Route
         path="/pending"
+        // exact={true}
         element={
           auth ? <SummaryPage type="pending" /> : <Navigate to={"login"} />
         }
       />
       <Route
         path="/pending/:agency"
-        element={
-          auth ? <SummaryPage type="pending" /> : <Navigate to={"login"} />
-        }
+        element={auth ? <ListPage type="pending" /> : <Navigate to={"login"} />}
       />
       <Route
         path="/account"
+        // exact={true}
         element={auth ? <Account /> : <Navigate to={"login"} />}
       />
-      <Route
+      {/* <Route
         path="/account/:agency"
-        element={
-          auth ? <SummaryPage type="pending" /> : <Navigate to={"login"} />
-        }
-      />
+        element={auth ? <ListPage type="account" /> : <Navigate to={"login"} />}
+      /> */}
       <Route
         path="/approved"
+        // exact={true}
         element={
           auth ? <SummaryPage type="approved" /> : <Navigate to={"login"} />
         }
@@ -56,11 +60,12 @@ const Index = () => {
       <Route
         path="/approved/:agency"
         element={
-          auth ? <SummaryPage type="pending" /> : <Navigate to={"login"} />
+          auth ? <ListPage type="approved" /> : <Navigate to={"login"} />
         }
       />
       <Route
         path="/declined"
+        // exact={true}
         element={
           auth ? <SummaryPage type="declined" /> : <Navigate to={"login"} />
         }
@@ -68,21 +73,21 @@ const Index = () => {
       <Route
         path="/declined/:agency"
         element={
-          auth ? <SummaryPage type="pending" /> : <Navigate to={"login"} />
+          auth ? <ListPage type="declined" /> : <Navigate to={"login"} />
         }
       />
       <Route
         path="/paid"
+        // exact={true}
         element={auth ? <SummaryPage type="paid" /> : <Navigate to={"login"} />}
       />
       <Route
         path="/paid/:agency"
-        element={
-          auth ? <SummaryPage type="pending" /> : <Navigate to={"login"} />
-        }
+        element={auth ? <ListPage type="paid" /> : <Navigate to={"login"} />}
       />
       <Route
         path="/details"
+        // exact={true}
         element={auth ? <Details /> : <Navigate to={"login"} />}
       />
       <Route

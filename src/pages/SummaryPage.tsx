@@ -14,8 +14,8 @@ const SummaryPage: React.FC<Props> = (props) => {
   }, [useLocation()]);
   return (
     <MainLayout>
-      <section className="h-screen absolute top-0 left-0 w-screen p-5 flex flex-col justify-center items-center">
-        <div className="container max-w-sm text-center">
+      <section className="min-h-screen absolute top-0 left-0 w-screen p-5 flex flex-col justify-center items-center">
+        <div className="container max-w-sm text-center py-10">
           <h5
             className={`text-[80px] text-center leading-12 self-center ${
               props.type === "declined"

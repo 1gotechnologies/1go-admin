@@ -25,17 +25,15 @@ export default function Home() {
           onClick={() => setOpenSearch(!openSearch)}
           className="pb-2 cursor-pointer sticky top-[3.8rem] bg-[#FCFCFC] z-10 scale-[105%] md:scale-[100%]"
         >
-          <div className="bg-[#F2F2F2] px-2 flex items-center justify-around relative container">
+          <div className="bg-[#F2F2F2] px-2  pl-8 flex items-center justify-around relative container text-ellipsis  truncate ...">
             <HiOutlineSearch className="min-w-[20px] h-auto absolute left-2" />
-            <div className="bg-inherit grow py-3 pl-8">
-              Search tour operators
-            </div>
+            <div className="bg-inherit grow py-3">Search tour operators</div>
           </div>
         </div>
 
         {/* agency */}
-        <div className="flex justify-between my-4 gap-2 container sticky top-[6.5rem] pb-2 bg-[#FCFCFC] z-10">
-          <div className="text-ellipsis grow truncate max-w-[40%]">
+        <div className="flex justify-between my-4 gap-2 container ">
+          <div className="text-ellipsis truncate ... max-w-[40%] grow">
             <h5 className="text-[20px] font-normal">{agency}</h5>
           </div>
 

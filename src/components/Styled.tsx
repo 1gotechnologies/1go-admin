@@ -28,8 +28,10 @@ const SLink = styled(NavLink)`
   }
 
   &.active {
-    color: rgb(29 78 216);
-    font-weight: 600;
+    &a:active {
+      color: rgb(29 78 216);
+      font-weight: 600;
+    }
   }
 `;
 
