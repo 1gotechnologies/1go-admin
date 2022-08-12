@@ -5,12 +5,11 @@ import Account from "../pages/Account";
 import Approved from "../pages/Approved";
 import Declined from "../pages/Declined";
 import ListPage from "../pages/ListPage";
-import Details from "../pages/Details";
+import DetailsPage from "../pages/DetailsPage";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Paid from "../pages/Paid";
 import Pending from "../pages/Pending";
-import PendingDetails from "../pages/PendingDetails";
 import Register from "../pages/Register";
 import SummaryPage from "../pages/SummaryPage";
 
@@ -86,13 +85,9 @@ const Index = () => {
         element={auth ? <ListPage type="paid" /> : <Navigate to={"login"} />}
       />
       <Route
-        path="/details"
+        path="/:type/details/:id"
         // exact={true}
-        element={auth ? <Details /> : <Navigate to={"login"} />}
-      />
-      <Route
-        path="/pending-details"
-        element={auth ? <PendingDetails /> : <Navigate to={"login"} />}
+        element={auth ? <DetailsPage /> : <Navigate to={"login"} />}
       />
       <Route
         path="/login"

@@ -15,7 +15,7 @@ const Avatar: React.FC<Props> = (props) => {
     );
   });
   return (
-    <div className="rounded-full h-[40px] w-[40px] text-blue-700">
+    <div className="rounded-full min-h-[40px] min-w-[40px] text-blue-700">
       <img
         src={props.image}
         className={` ${

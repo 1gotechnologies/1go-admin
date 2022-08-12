@@ -7,6 +7,7 @@ import { CgClose } from "react-icons/cg";
 import { Search } from "../components/Search";
 import SummaryCard from "../components/SummaryCard";
 import { Link } from "react-router-dom";
+import { faker } from "@faker-js/faker";
 
 export default function Home() {
   const [agency, setAgency] = useState("STATSPIZZA CONSULTS LTD");
@@ -44,25 +45,25 @@ export default function Home() {
         </div>
 
         <section className="container flex flex-wrap lg:flex-nowrap justify-around gap-y-10 gap-x-5 sm:gap-10">
-          <Link to={"pending/qety"}>
-            <SummaryCard type="pending" value={17} />
+          <Link to={`pending/${faker.random.alphaNumeric()}`}>
+            <SummaryCard type="pending" value={faker.random.numeric()} />
           </Link>
 
-          <Link to={"declined/qety"}>
-            <SummaryCard type="declined" value={11} />
+          <Link to={`declined/${faker.random.alphaNumeric()}`}>
+            <SummaryCard type="declined" value={faker.random.numeric()} />
           </Link>
 
-          <Link to={"approved/qety"}>
-            <SummaryCard type="approved" value={38} />
+          <Link to={`approved/${faker.random.alphaNumeric()}`}>
+            <SummaryCard type="approved" value={faker.random.numeric()} />
           </Link>
 
-          <Link to={"paid/qety"}>
-            <SummaryCard type="paid" value={24} />
+          <Link to={`paid/${faker.random.alphaNumeric()}`}>
+            <SummaryCard type="paid" value={faker.random.numeric()} />
           </Link>
         </section>
 
         <section className="container my-5 text-center bottom-0 left-0 right-0">
-          <h2 className="text-[45px] font-light">66</h2>
+          <h2 className="text-[45px] font-light">{faker.random.numeric(2)}</h2>
           <p>Overall applications</p>
         </section>
 
