@@ -16,18 +16,21 @@ const ListPage: React.FC<{
         </h1>
         <div className="p-5" />
         <div className="flex flex-col gap-3 ">
-          {Array.from({ length: 10 }, (item, index) => (
-            <Link
-              to={`/${props.type}/details/${faker.random.alphaNumeric()}`}
-              key={index}
-            >
-              <ListItem
-                name={faker.name.fullName()}
-                date={faker.date.recent()}
-                {...props}
-              />
-            </Link>
-          ))}
+          {Array.from(
+            { length: Number(faker.random.numeric()) },
+            (item, index) => (
+              <Link
+                to={`/${props.type}/details/${faker.random.alphaNumeric()}`}
+                key={index}
+              >
+                <ListItem
+                  name={faker.name.fullName()}
+                  date={faker.date.recent()}
+                  {...props}
+                />
+              </Link>
+            )
+          )}
         </div>
       </section>
     </MainLayout>
