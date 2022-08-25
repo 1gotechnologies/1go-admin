@@ -34,8 +34,8 @@ export default function Home() {
 
         {/* agency */}
         <div className="flex justify-between my-4 gap-2 container ">
-          <div className="text-ellipsis truncate ... max-w-[40%] grow">
-            <h5 className="text-[20px] font-normal">{agency}</h5>
+          <div className="max-w-[40%] grow">
+            <h5 className="text-[20px] font-normal truncate">{agency}</h5>
           </div>
 
           <select name="" id="" className="bg-inherit max-w-[30%]">

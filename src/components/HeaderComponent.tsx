@@ -45,7 +45,7 @@ const HeaderComponent = () => {
         </NavLink>
 
         <div
-          className={`top-0 max-w-[80vw] z-50 duration-500 transition-all fixed md:relative right-0 h-screen md:!h-fit flex grow md:self-center justify-start md:justify-between flex-wrap-reverse md:flex-nowrap py-[4rem] md:py-0 overflow-y-auto 
+          className={`top-0 max-w-[80vw] z-50 duration-500 transition-all fixed md:relative right-0 h-screen max-h-screen md:!h-fit flex grow md:self-center md:justify-between flex-wrap-reverse md:flex-nowrap overflow-y-auto md:overflow-visible 
             ${
               show
                 ? "bg-white shadow md:shadow-none"
@@ -54,7 +54,7 @@ const HeaderComponent = () => {
         >
           <div className="hidden md:block md:grow" />
 
-          <nav className="flex flex-col md:flex-nowrap md:flex-row md:gap-1 lg:gap-5 w-full grow md:shrink md:w-fit lg:w-full max-w-screen-sm items-start md:items-center md:justify-end pr-5 lg:justify-start min-h-fit responsive-nav !overflow-y-auto md:!overflow-visible min-w-[15rem] h-screen md:h">
+          <nav className="flex flex-col md:flex-nowrap md:flex-row md:gap-1 lg:gap-5 w-full grow md:shrink md:w-fit lg:w-full max-w-screen-sm items-start md:items-center md:justify-end md:pr-5 lg:justify-start min-h-fit responsive-nav min-w-[15rem] md:h-fit">
             <SLink
               to="/"
               className={
@@ -99,7 +99,7 @@ const HeaderComponent = () => {
 
           <div className="hidden md:block lg:grow lg:min-w-[4rem]" />
 
-          <div className="w-full md:shrink md:self-end md:justify-end md:items-end flex md:w-fit lg:w-[10rem] h-fit ">
+          <div className="w-full sticky top-0 md:shrink self-start justify-end items-end flex md:w-fit lg:w-[10rem] md:self-center bg-inherit py-3 md:p-0 ">
             <Dropdown
               label={
                 <Btn className="flex gap-2 justify-around w-full">
@@ -108,15 +108,18 @@ const HeaderComponent = () => {
                 </Btn>
               }
               content={
-                <div className="bg-white border-[##ACAAAA] border shadow rounded-md p-3 flex flex-col absolute mx-auto min-w-[10rem] md:right-2 z-50">
-                  <SLink to={"/"} className=" whitespace-nowrap">
-                    My Account
-                  </SLink>
-                  <SLink to={"/"}>Logout</SLink>
+                <div className="py-1 px-3 mx-auto min-w-[10rem] flex justify-center absolute md:right-2 z-50 w-full md:w-max">
+                  <div className="shadow bg-white border-[##ACAAAA] border p-3 rounded-md flex flex-col absolute min-w-[90%]">
+                    <SLink to={"/"} className=" whitespace-nowrap">
+                      My Account
+                    </SLink>
+                    <SLink to={"/"}>Logout</SLink>
+                  </div>
                 </div>
               }
             />
           </div>
+          <div className="py-4 w-full md:hidden" />
         </div>
       </div>
 
