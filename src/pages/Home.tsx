@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   return (
-    <MainLayout>
+    <MainLayout title="Tour Operator Dashboard">
       <div>
         {/* search agency */}
         <div

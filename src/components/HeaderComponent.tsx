@@ -25,7 +25,7 @@ const HeaderComponent = () => {
 
   return (
     <header className="bg-[#FCFCFC] md:bg-white sticky w-full z-50 top-0 flex justify-between p-3 md:py-0 md:shadow">
-      <div className={"md:hidden pt-2 z-[999999]"}>
+      <div className={"md:hidden pt-2 z-[50]"}>
         {!isHome && (
           <Btn onClick={goBack}>
             <BiArrowBack fontSize={"1.8rem"} />
@@ -45,7 +45,7 @@ const HeaderComponent = () => {
         </NavLink>
 
         <div
-          className={`top-0 max-w-[80vw] z-50 duration-500 transition-all fixed md:relative right-0 h-screen md:!h-fit flex grow md:self-center justify-start md:justify-between flex-wrap-reverse md:flex-nowrap py-[4rem] md:py-0 
+          className={`top-0 max-w-[80vw] z-50 duration-500 transition-all fixed md:relative right-0 h-screen md:!h-fit flex grow md:self-center justify-start md:justify-between flex-wrap-reverse md:flex-nowrap py-[4rem] md:py-0 overflow-y-auto 
             ${
               show
                 ? "bg-white shadow md:shadow-none"
@@ -54,7 +54,7 @@ const HeaderComponent = () => {
         >
           <div className="hidden md:block md:grow" />
 
-          <nav className="flex flex-col md:flex-nowrap md:flex-row md:gap-1 lg:gap-5 w-full grow md:shrink md:w-fit lg:w-full max-w-screen-sm items-start md:items-center md:justify-end pr-5 lg:justify-center min-h-fit responsive-nav !overflow-y-auto md:!overflow-visible min-w-[15rem] ">
+          <nav className="flex flex-col md:flex-nowrap md:flex-row md:gap-1 lg:gap-5 w-full grow md:shrink md:w-fit lg:w-full max-w-screen-sm items-start md:items-center md:justify-end pr-5 lg:justify-start min-h-fit responsive-nav !overflow-y-auto md:!overflow-visible min-w-[15rem] h-screen md:h">
             <SLink
               to="/"
               className={
@@ -99,7 +99,7 @@ const HeaderComponent = () => {
 
           <div className="hidden md:block lg:grow lg:min-w-[4rem]" />
 
-          <div className="w-full md:shrink md:self-end md:justify-end md:items-end flex md:w-fit lg:w-[10rem] h-fit">
+          <div className="w-full md:shrink md:self-end md:justify-end md:items-end flex md:w-fit lg:w-[10rem] h-fit ">
             <Dropdown
               label={
                 <Btn className="flex gap-2 justify-around w-full">

@@ -7,6 +7,7 @@ import HeaderComponent from "../components/HeaderComponent";
 export interface Props {
   children: React.ReactElement;
   auth?: boolean;
+  title?: string;
 }
 const MainLayout: React.FC<Props> = (props) => {
   const { pathname } = useLocation();
@@ -20,6 +21,12 @@ const MainLayout: React.FC<Props> = (props) => {
       // behavior: "instant", // Optional if you want to skip the scrolling animation
     });
   }, [pathname]);
+
+  useEffect(() => {
+    document.title =
+      props.title ??
+      "1goexplore | Become an explorer, explore the world - 1goexplore.com";
+  }, [props.title]);
 
   return (
     <main className="flex flex-col justify-between bg-[#FCFCFC] min-h-screen">

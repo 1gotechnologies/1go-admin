@@ -14,7 +14,7 @@ const SummaryPage: React.FC<Props> = (props) => {
   //   setValue(Math.floor(Math.random() * 987));
   // }, [useLocation()]);
   return (
-    <MainLayout>
+    <MainLayout title={props.type.toString().toUpperCase() + " Requests"}>
       <section className="min-h-screen absolute top-0 left-0 w-screen p-5 flex flex-col justify-center items-center">
         <div className="container max-w-sm text-center py-10">
           <h5
